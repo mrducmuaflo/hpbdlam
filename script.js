@@ -84,7 +84,7 @@ function checkSpecialPassword() {
         specialPasswordPopup.style.display = 'none';
         loadSpecialImages();
     } else {
-        specialPasswordMessage.textContent = 'Chúc mừng bạn đã sai đúng mật khẩu!';
+        specialPasswordMessage.textContent = 'Chúc mừng bạn đã nhập sai mật khẩu!';
     }
 }
 
