@@ -101,7 +101,6 @@ function loadSpecialImages() {
         'images/blam/cb243ac2c061653f3c7012.jpg',
         'images/blam/d43c4cdbb67813264a6910.jpg',
         'images/blam/ea978139c39766c93f86.jpg',
-        
         // Thêm đường dẫn các ảnh "Lam và Tôi"
     ];
 
@@ -161,19 +160,26 @@ function clearImageContainers() {
 
     const catImagesContainer = document.getElementById('catImagesContainer');
     catImagesContainer.innerHTML = ''; // Xóa ảnh mèo
+
+    // Dừng và ẩn video
+    const videoElement = document.getElementById('bestVideo');
+    if (videoElement) {
+        videoElement.pause();
+        videoElement.currentTime = 0;
+        document.getElementById('videoContainer').style.display = 'none';
+    }
+
+    // Ẩn thông điệp kết thúc nếu có
+    const endMessage = document.getElementById('endMessage');
+    if (endMessage) {
+        endMessage.style.display = 'none';
+    }
 }
 
 // Thêm vào cuối script.js
 function showVideoQuestion() {
-    clearImageContainers(); // Xóa ảnh đang hiển thị
+    clearImageContainers(); // Xóa ảnh và dừng video đang hiển thị
     stopBackgroundMusic(); // Dừng nhạc nền chính
-
-    // Dừng bất kỳ video nào đang phát
-    const videoElements = document.querySelectorAll('video');
-    videoElements.forEach(video => {
-        video.pause();
-        video.currentTime = 0;
-    });
 
     // Dừng các nhạc khác đang phát
     if (currentTrack) {
@@ -189,11 +195,15 @@ function checkVideoAnswer() {
     const answer = document.getElementById('videoQuestionInput').value.trim().toLowerCase();
     const message = document.getElementById('videoQuestionMessage');
     const videoContainer = document.getElementById('videoContainer');
+    const specialContent = document.getElementById('specialContent'); // Thẻ <p> đặc biệt
     const endMessage = document.getElementById('endMessage');
+    const videoQuestionPopup = document.getElementById('videoQuestionPopup');
 
-    if (answer === 'chung của') {
-        document.getElementById('videoQuestionPopup').style.display = 'none';
+    if (answer === 'chung của' || answer === 'chungcua') {
+        message.textContent = 'Đúng rồi! Câu trả lời chính xác!';
+        videoQuestionPopup.style.display = 'none';
         videoContainer.style.display = 'block';
+        specialContent.style.display = 'block'; // Hiển thị thẻ <p> đặc biệt
         stopBackgroundMusic(); // Dừng nhạc nền khi video bắt đầu
 
         const videoElement = document.getElementById('bestVideo');
@@ -204,7 +214,6 @@ function checkVideoAnswer() {
             backgroundMusic.play(); // Bắt đầu lại nhạc nền khi video kết thúc
         };
     } else {
-        message.textContent = 'Câu trả lời sai! Thử lại nhé!';
+        message.textContent = 'Sai rồi! Hãy thử lại!';
     }
 }
-

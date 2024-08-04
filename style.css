@@ -170,8 +170,9 @@ input {
     margin-top: 10px;
 }
 
-#endMessage {
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: 20px;
+#specialContent {
+    text-align: center;
+    font-size: 2.2em;
+    margin-top: 10px;
+    color: tomato; /* Màu hồng dễ thương */
 }
