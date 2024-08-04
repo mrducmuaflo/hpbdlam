@@ -8,8 +8,7 @@ body {
     background-repeat: repeat;
 }
 .total {
-    font-family: 'Comic Neue', 'Comic Sans MS', cursive;
-    
+    font-family: 'Pacifico', cursive;  
     text-align: center;
     color: #333;
     margin: 0;
@@ -24,7 +23,7 @@ body {
     border-radius: 10px;
     background-color: aquamarine;
     margin-bottom: 7px;
-    transform: translateY(-40px);
+    transform: translateY(-30px);
 }
 
 .images {
