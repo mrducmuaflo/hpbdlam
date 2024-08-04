@@ -23,7 +23,8 @@ body {
     border: 2px solid tomato;
     border-radius: 10px;
     background-color: aquamarine;
-    margin-bottom: 5px;
+    margin-bottom: 7px;
+    transform: translateY(-40px);
 }
 
 .images {
@@ -165,6 +166,7 @@ input {
 #videoContainer {
     text-align: center;
     margin-top: 5px;
+    transform: translateY(-20px);
 }
 #bestvideo {
     margin-top: 10px;
@@ -175,4 +177,18 @@ input {
     font-size: 2.2em;
     margin-top: 10px;
     color: tomato; /* Màu hồng dễ thương */
+    animation: specialcontent 3s infinite ;
+}
+@keyframes specialcontent {
+    20% {
+        color: #2ecc71;
+        transform: scale(1.1);
+    }
+    40% {
+        color: #333;
+    }
+    60% {
+        color: #3498db;
+    }
+    
 }
