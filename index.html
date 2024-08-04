@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>️🎉HAPPY BIRTHDAY TO LAMMM!</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="password-section no-style">
+        <h2>Trả lời câu hỏi sau để truy cập web: Lam và Long cùng thích màu gì?</h2>
+        <input type="password" id="passwordInput" placeholder="Nhập mật khẩu">
+        <button onclick="checkPassword()">Gửi</button>
+        <p id="passwordMessage"></p>
+    </div>
+    <div class="total">
+        <div class="container" style="display: none;">
+            <audio id="birthdayMusic" src="sound/y2mate.com - Happy Birthday Piano Version.mp3" autoplay loop></audio>
+            <div class="content">
+                <div class="happy">
+                    <h1 class="animated-title">️🎉Chúc Mừng Sinh Nhậ️t Bạn Lammmmmm️🎉</h1>
+                    <p>Tiu chúc Lam có một ngày sinh nhật thật vui vẻ và ý nghĩa, chúc Lam sẽ lun tích cực in real life and dưới góc nhìn của Tiu thì Lam giống cái web này vậy, vẻ bề ngoài không phải là tất cả.Cúi cùng Tiu mong rằng mọi điều tốt đẹp nhất sẽ đến với Lam nhe☘</p>
+                </div>
+                <div class="images">
+                    <img src="images/a12f0f7c-5eb5-4a5e-b558-0bddb01d19c3.jpg" alt="Friend Photo" class="friend-photo">
+                    <img src="images/tb3e.jpg" alt="Birthday Cake" class="birthday-cake">
+                </div>
+                <div class="buttons">
+                    <button onclick="showSpecialImages()">Ảnh Lam ở đây💓</button>
+                    <button onclick="showCatImages(1)">😾Cá</button>
+                    <button onclick="showCatImages(2)">😾Ốc</button>
+                    <button onclick="showCatImages(3)">😾Meow</button>
+                    <button onclick="showVideoQuestion()">Bí mật hehe😏</button>
+                </div>
+                <div id="specialImagesContainer" class="special-images-container" style="display: none;">
+                    <h2>trong máy tiêu😸</h2>
+                    <div id="specialImages"></div>
+                </div>
+                <div id="catImagesContainer" class="cat-images-container"></div>
+                <div id="confetti"></div>
+            </div>
+        </div>
+        <div id="specialPasswordPopup" class="popup">
+            <div class="popup-content">
+                <h2>Ngày sinh NY cũ Tiu là ngày nào?</h2>
+                <input type="text" id="specialPasswordInput" placeholder="Nhập ngày sinh">
+                <button class="buttonsend" onclick="checkSpecialPassword()">Gửi</button>
+                <p id="specialPasswordMessage"></p>
+            </div>
+        </div>
+
+        <!-- Thêm phần popup cho câu hỏi và video -->
+        <div id="videoQuestionPopup" class="popup">
+            <div class="popup-content">
+                 <h2>Thằng Long thích thể loại nhạc nào nhất?</h2>
+                <input type="text" id="videoQuestionInput" placeholder="Nhập câu trả lời">
+                <button class="buttonsend" onclick="checkVideoAnswer()">Gửi</button>
+                <p id="videoQuestionMessage"></p>
+        </div>
+        </div>
+        <!-- Phần chứa video và thông điệp kết thúc -->
+        <div id="videoContainer" style="display: none;">
+             <video id="bestVideo" width="600" controls>
+             <source src="video/y2mate.com - GIỌNG CƯỜI CỦA BA GÀ KẾT HỢP VỚI MV CỦA JACK_360p.mp4" type="video/mp4">
+             Your browser does not support the video tag.
+            </video>
+            <p id="endMessage">Do tuổi nhỏ nên tôi đã bí content, Gud Bie see you later!!</p>
+        </div>
+    </div>
+</body>
+</html>
