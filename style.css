@@ -24,6 +24,8 @@ body {
     background-color: aquamarine;
     margin-bottom: 7px;
     transform: translateY(-30px);
+    max-width: 90%; /* Giới hạn chiều rộng tối đa để phù hợp trên cả thiết bị di động */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tạo đổ bóng nhẹ để nổi bật */
 }
 
 .images {
@@ -53,6 +55,7 @@ body {
     font-size: 2.5em;
     margin: 20px 0;
     animation: bounce 2s infinite, color-change 5s infinite;
+    word-wrap: break-word;
 }
 
 @keyframes bounce {
